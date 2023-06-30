@@ -1,0 +1,12 @@
+2023-04-21 17:48:00.292 INFO [main] [logging.LoggingDemo.execute(LoggingDemo.java:72)] - This is INFO log
+2023-04-21 17:48:00.295 WARN [main] [logging.LoggingDemo.execute(LoggingDemo.java:73)] - This is a WARNING log
+2023-04-21 17:48:00.295 ERROR [main] [logging.LoggingDemo.execute(LoggingDemo.java:74)] - This is a ERROR log
+2023-04-21 17:48:00.295 DEBUG [main] [logging.LoggingDemo.execute(LoggingDemo.java:75)] - This is a DEBUG log
+2023-04-21 17:49:20.864 INFO [main] [logging.LoggingDemo.execute(LoggingDemo.java:72)] - This is INFO log
+2023-04-21 17:49:20.868 WARN [main] [logging.LoggingDemo.execute(LoggingDemo.java:73)] - This is a WARNING log
+2023-04-21 17:49:20.868 ERROR [main] [logging.LoggingDemo.execute(LoggingDemo.java:74)] - This is a ERROR log
+2023-04-21 17:49:20.868 DEBUG [main] [logging.LoggingDemo.execute(LoggingDemo.java:75)] - This is a DEBUG log
+2023-04-21 17:53:54.381 INFO [main] [logging.LoggingDemo.execute(LoggingDemo.java:72)] - This is INFO log
+2023-04-21 17:53:54.383 WARN [main] [logging.LoggingDemo.execute(LoggingDemo.java:73)] - This is a WARNING log
+2023-04-21 17:53:54.383 ERROR [main] [logging.LoggingDemo.execute(LoggingDemo.java:74)] - This is a ERROR log
+2023-04-21 17:53:54.384 DEBUG [main] [logging.LoggingDemo.execute(LoggingDemo.java:75)] - This is a DEBUG log

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: junit5basics.MathUtilsTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.06 s - in junit5basics.MathUtilsTest
