@@ -17,10 +17,6 @@ public class CollectionsPart3 {
             - The user of a List generally has precise control over where in the list each element is inserted
                 and can access elements by their integer index (position).
 
-        Set — a collection that cannot contain duplicate elements.
-
-        SortedSet — a Set that maintains its elements in ascending order.
-
         Queue — a collection used to hold multiple elements prior to processing. Besides basic Collection operations,
             a Queue provides additional insertion, extraction, and inspection operations.
 
@@ -28,6 +24,10 @@ public class CollectionsPart3 {
             a Deque provides additional insertion, extraction, and inspection operations.
             - Deques can be used both as FIFO (first-in, first-out) and LIFO (last-in, first-out). In a deque all
                 new elements can be inserted, retrieved and removed at both ends.
+
+        Set — a collection that cannot contain duplicate elements.
+
+        SortedSet — a Set that maintains its elements in ascending order.
 
         Map — an object that maps keys to values. A Map cannot contain duplicate keys; each key can map to at most one value.
 

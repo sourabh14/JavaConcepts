@@ -1,6 +1,7 @@
 package collections;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CollectionsPart2 {
         /*
@@ -34,7 +35,7 @@ public class CollectionsPart2 {
                         List list = Collections.synchronizedList(new ArrayList(...));
          */
         public void arrayListDemo() {
-            ArrayList<String> arrayList = new ArrayList<>();
+            List<String> arrayList = new ArrayList<>();
             for (int i=0; i<5; i++) {
                 arrayList.add("element-" + i);
             }

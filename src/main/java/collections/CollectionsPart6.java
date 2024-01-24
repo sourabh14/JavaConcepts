@@ -1,7 +1,11 @@
 package collections;
 
+import java.util.Comparator;
+import java.util.Deque;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.Stack;
 
 public class CollectionsPart6 {
     /*
@@ -87,4 +91,144 @@ public class CollectionsPart6 {
                 - The methods getFirst and peekFirst retrieve the first element of the Deque instance.
                 - Similarly, the methods getLast and peekLast retrieve the last element.
      */
+
+    public void dequeDemo() {
+        Deque<String> stringDeque = new LinkedList<>();
+        // Insert - offerFirst and offerLast
+        //      returns true if the element was added to this deque, else false
+        stringDeque.add("hello");
+        System.out.println("stringDeque = " + stringDeque);
+        stringDeque.add("world");
+        System.out.println("stringDeque = " + stringDeque);
+        stringDeque.add("java");
+        System.out.println("stringDeque = " + stringDeque);
+        stringDeque.add("mysql");
+        System.out.println("stringDeque = " + stringDeque);
+
+        System.out.println("stringDeque = " + stringDeque);
+
+        while (!stringDeque.isEmpty()) {
+            String firstElement = stringDeque.poll();
+            System.out.println("firstElement polled = " + firstElement);
+            System.out.println("stringDeque = " + stringDeque);
+        }
+
+        System.out.println("");
+        // with add and remove
+        Queue<String> stringQueue = new LinkedList<>();
+        // Insert - offerFirst and offerLast
+        //      returns true if the element was added to this deque, else false
+        stringQueue.add("hello");
+        System.out.println("stringDeque = " + stringQueue);
+        stringQueue.add("world");
+        System.out.println("stringDeque = " + stringQueue);
+        stringQueue.add("java");
+        System.out.println("stringDeque = " + stringQueue);
+        stringQueue.add("mysql");
+        System.out.println("stringDeque = " + stringQueue);
+
+        System.out.println("stringDeque = " + stringQueue);
+
+        // Remove - pollFirst and pollLast
+        //      returns null if this deque is empty.
+        while (!stringQueue.isEmpty()) {
+            String firstElement = stringQueue.remove();
+            System.out.println("firstElement polled = " + firstElement);
+            System.out.println("stringDeque = " + stringQueue);
+        }
+
+
+        System.out.println("Stack demo");
+        Stack<String> stringStack = new Stack<>();
+        stringStack.add("hello");
+        System.out.println("stringDeque = " + stringStack);
+        stringStack.add("world");
+        System.out.println("stringDeque = " + stringStack);
+        stringStack.add("java");
+        System.out.println("stringDeque = " + stringStack);
+        stringStack.add("mysql");
+        System.out.println("stringDeque = " + stringStack);
+        System.out.println("Stack top: " + stringStack.peek());
+
+        while (!stringStack.isEmpty()) {
+            String firstElement = stringStack.pop();
+            System.out.println("firstElement polled = " + firstElement);
+            System.out.println("stringDeque = " + stringStack);
+        }
+
+        // IN SHORT
+
+        // For stack use Stack interface - push(), pop(), peek() - this will be LIFO
+        // For queue use Queue interface - add(), remove(), element() - this will be FIFO
+        //      If you want to add and remove from both ends of queue - Use Deque - addFirst(), addLast(),
+        //          removeFirst() and removeLast()
+
+    }
+
+    class Student {
+        String name;
+        Integer rank;
+
+        public Student(String name, Integer rank) {
+            this.name = name;
+            this.rank = rank;
+        }
+
+        @Override
+        public String toString() {
+            return "Student{" +
+                    "name='" + name + '\'' +
+                    ", rank=" + rank +
+                    '}';
+        }
+    }
+
+    public void priorityQueue() {
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+        priorityQueue.add(4);
+        priorityQueue.add(1);
+        priorityQueue.add(3);
+        priorityQueue.add(4);
+        priorityQueue.add(7);
+        priorityQueue.add(9);
+        priorityQueue.add(3);
+        priorityQueue.add(6);
+
+        System.out.print("Priority queue: ");
+        while (!priorityQueue.isEmpty()) {
+            System.out.print(priorityQueue.remove() + ", ");
+        }
+        System.out.println("");
+
+        // Reverse ordering of natural comparison
+        PriorityQueue<Integer> maxPriorityQueue = new PriorityQueue<>(Comparator.reverseOrder());
+        maxPriorityQueue.add(4);
+        maxPriorityQueue.add(1);
+        maxPriorityQueue.add(3);
+        maxPriorityQueue.add(4);
+        maxPriorityQueue.add(7);
+        maxPriorityQueue.add(9);
+        maxPriorityQueue.add(3);
+        maxPriorityQueue.add(6);
+
+        System.out.print("Priority queue reverse: ");
+        while (!maxPriorityQueue.isEmpty()) {
+            System.out.print(maxPriorityQueue.remove() + ", ");
+        }
+        System.out.println();
+
+        // Ordering by comparator - rank
+        PriorityQueue<Student> studentPriorityQueue = new PriorityQueue<>((a, b) -> Integer.compare(a.rank, b.rank));
+        studentPriorityQueue.add(new Student("test1", 5));
+        studentPriorityQueue.add(new Student("test2", 1));
+        studentPriorityQueue.add(new Student("test3", 6));
+        studentPriorityQueue.add(new Student("test4", 2));
+        studentPriorityQueue.add(new Student("test5", 4));
+
+        System.out.print("Student priority queue: ");
+        while (!studentPriorityQueue.isEmpty()) {
+            System.out.print(studentPriorityQueue.remove() + ", ");
+        }
+        System.out.println();
+    }
 }

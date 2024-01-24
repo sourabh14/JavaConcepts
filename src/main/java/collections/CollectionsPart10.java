@@ -36,6 +36,7 @@ public class CollectionsPart10 {
 
         // Binary search
         // This form assumes that the List is sorted in ascending order according to the natural ordering of its elements. T
+        // If the list contains multiple elements equal to the specified object, there is no guarantee which one will be found.
         Integer index = Collections.binarySearch(integerList, 3);
         System.out.println("index of 3 = " + index);
 

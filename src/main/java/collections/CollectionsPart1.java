@@ -1,6 +1,7 @@
 package collections;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class CollectionsPart1 {
@@ -12,7 +13,7 @@ public class CollectionsPart1 {
             - Collections are used to store, retrieve, manipulate, and communicate aggregate data.
 
         Collections Framework
-            - A collections framework is a unified architecture for representing and manipulating collections. All
+            - A Collections framework is a unified architecture for representing and manipulating collections. All
             collections frameworks contain the following:
                 - Interfaces: These are abstract data types that represent collections. Interfaces allow collections to
                     be manipulated independently of the details of their representation.
@@ -21,19 +22,19 @@ public class CollectionsPart1 {
                 - Algorithms: These are the methods that perform useful computations, such as searching and sorting,
                 on objects that implement collection interfaces.
 
-
-
      */
     public void ArraysDemo() {
         /*
-            Java Arrays and Arrays Class
-
-            Arrays Class
-                - This class contains various methods for manipulating arrays (such as sorting and searching).
-                - This class provides static methods to dynamically create and access Java arrays.
+            Java Arrays
          */
         int[] array = new int[10];
         int[] array2 = {24, 93, 93, 51, 85, 99, 26, 84, 63, 29};
+
+        int[][] testArray = {{3, 4}, {7, 2}, {4, 9} , {2, 4}};
+
+        Arrays.sort(testArray, Comparator.comparingInt((int[] o) -> o[0]));
+        System.out.println("testArray: " + Arrays.deepToString(testArray));
+
 
         populateArray(array);
         printArray(array, "array");
@@ -41,7 +42,12 @@ public class CollectionsPart1 {
         // We can create both primitive and object arrays
         String[] stringArray = new String[10];
 
-        /* asList -
+        /*
+        Arrays Class
+                - This class contains various methods for manipulating arrays (such as sorting and searching).
+                - This class provides static methods to dynamically create and access Java arrays.
+
+        asList -
             - Using this method, we can convert from an array to a fixed-size List object.
             - Only Object type arrays can be converted to list (not primitive type - int[] cannot be converted to list)
             - This List is just a wrapper that makes the array available as a list. No data is copied or created.
