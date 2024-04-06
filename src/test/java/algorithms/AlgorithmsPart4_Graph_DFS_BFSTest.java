@@ -1,13 +1,10 @@
 package algorithms;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-class AlgorithmsPart4Test {
+import static org.junit.jupiter.api.Assertions.*;
 
-    @AfterEach
-    void tearDown() {
-    }
+class AlgorithmsPart4_Graph_DFS_BFSTest {
 
     @Test
     void execute() {

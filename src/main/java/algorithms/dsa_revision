@@ -1,0 +1,193 @@
+dsa_revision
+
+https://leetcode.com/explore/learn/
+https://www.interviewbit.com/courses/programming/
+
+
+Main topics
+===========
+Part 1
+- Arrays & Matrix:	- DONE
+- String: 			- DONE
+- Linked-list:		- DONE
+- Stacks & Queue:	- DONE
+
+Part 2
+- Sorting (theory): - DONE
+- Binary search: 	- DONE
+
+Part 3
+- Binary tree:		- DONE
+    Binary Tree Traversal
+	Infix, Prefix, Postfix
+- BST:				- DONE
+	BST, AVL Tree, RB Tree
+- Heap:				- DONE
+	Heap and HeapSort, PriorityQueue
+
+Part 4
+- Backtracking   	- DONE
+- Greedy:			- DONE
+- DP:				- DONE
+
+Part 5
+- Graph: 			- DONE
+	Graph DFS BFS
+	Strongly connected components
+	Topological sort
+	MST Prim Kruskal, Dijkstra.cpp
+	Dijkstra
+	Disjoing Set DS.cpp
+- Disjoint Set      - DONE
+
+Part 6
+- Hash tables
+- Sliding window
+- Bit manipulation
+- Trie
+
+
+
+
+
+
+---------------------------------------------------------------------
+- Array:
+
+https://leetcode.com/problems/set-matrix-zeroes/
+https://leetcode.com/problems/maximum-subarray/
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+https://leetcode.com/problems/rotate-image/
+https://leetcode.com/problems/merge-intervals/
+https://leetcode.com/problems/merge-sorted-array/
+https://leetcode.com/problems/majority-element/
+https://leetcode.com/problems/unique-paths/		
+
+
+- String: 
+https://leetcode.com/problems/reverse-words-in-a-string/submissions/
+https://leetcode.com/problems/valid-anagram/
+https://leetcode.com/problems/count-and-say/submissions/
+https://leetcode.com/problems/compare-version-numbers/submissions/
+https://www.interviewbit.com/problems/remove-consecutive-characters/
+https://www.interviewbit.com/problems/pretty-json/
+
+
+- Linked-list:
+https://leetcode.com/problems/reverse-linked-list/
+https://leetcode.com/problems/middle-of-the-linked-list/
+https://leetcode.com/problems/merge-two-sorted-lists/submissions/
+https://leetcode.com/problems/remove-nth-node-from-end-of-list/submissions/
+https://leetcode.com/problems/add-two-numbers/submissions/
+https://leetcode.com/problems/intersection-of-two-linked-lists/submissions/
+https://leetcode.com/problems/linked-list-cycle/submissions/
+https://leetcode.com/problems/palindrome-linked-list/
+
+
+
+- Stack:
+https://leetcode.com/problems/valid-parentheses/
+https://leetcode.com/problems/implement-stack-using-queues/
+https://leetcode.com/problems/decode-string/
+https://leetcode.com/problems/next-greater-element-i/               **
+https://www.interviewbit.com/problems/first-non-repeating-character-in-a-stream-of-characters/
+https://leetcode.com/problems/largest-rectangle-in-histogram/
+
+
+- Binary search:
+https://leetcode.com/problems/binary-search/
+https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array
+https://www.interviewbit.com/problems/matrix-search/
+https://www.interviewbit.com/problems/smaller-or-equal-elements/
+https://leetcode.com/problems/single-element-in-a-sorted-array/description/
+https://leetcode.com/problems/search-in-rotated-sorted-array/
+https://leetcode.com/problems/find-peak-element/
+https://leetcode.com/problems/search-a-2d-matrix-ii/
+https://www.interviewbit.com/problems/largest-continuous-sequence-zero-sum/
+
+
+- Binary tree:
+https://leetcode.com/problems/binary-tree-right-side-view/
+https://leetcode.com/problems/sum-of-left-leaves/description/
+https://leetcode.com/problems/find-bottom-left-tree-value/
+https://leetcode.com/problems/maximum-width-of-binary-tree/ 		**
+https://leetcode.com/problems/diameter-of-binary-tree/				**
+https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/description/
+https://leetcode.com/problems/symmetric-tree
+https://leetcode.com/problems/balanced-binary-tree/
+https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree
+https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
+https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
+https://leetcode.com/problems/binary-tree-maximum-path-sum/
+
+
+- BST:
+https://leetcode.com/problems/search-in-a-binary-search-tree
+https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree
+https://leetcode.com/problems/validate-binary-search-tree
+
+
+- Heap:
+https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/
+https://leetcode.com/problems/top-k-frequent-elements/description/
+https://leetcode.com/problems/reorganize-string/description/
+https://leetcode.com/problems/most-frequent-ids/description/ **
+
+- Graph:
+https://leetcode.com/problems/course-schedule
+https://leetcode.com/problems/course-schedule-ii/
+https://leetcode.com/problems/number-of-islands
+https://leetcode.com/problems/number-of-provinces/description/
+https://leetcode.com/problems/min-cost-to-connect-all-points/submissions/
+
+
+- Disjoint set:
+https://leetcode.com/problems/accounts-merge/
+
+
+- Backtracking, Recursion, P&C
+https://leetcode.com/problems/subsets/description/
+https://leetcode.com/problems/subsets-ii/description/
+https://www.interviewbit.com/problems/combinations/
+https://leetcode.com/problems/permutations/description/
+https://leetcode.com/problems/generate-parentheses/description/
+	- also see better solution - https://www.interviewbit.com/problems/generate-all-parentheses-ii/
+
+
+- Greedy:
+https://www.interviewbit.com/problems/disjoint-intervals/
+https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons
+https://www.interviewbit.com/problems/meeting-rooms/
+https://www.interviewbit.com/problems/seats/
+
+
+
+- DP:
+https://leetcode.com/problems/longest-palindromic-substring/submissions/
+https://leetcode.com/problems/maximum-product-subarray
+https://leetcode.com/problems/longest-increasing-subsequence
+https://leetcode.com/problems/longest-common-subsequence
+https://leetcode.com/problems/edit-distance
+https://leetcode.com/problems/coin-change
+https://leetcode.com/problems/partition-equal-subset-sum
+https://www.interviewbit.com/problems/0-1-knapsack/
+
+
+
+
+- Hash tables:
+https://leetcode.com/problems/find-the-duplicate-number/
+
+- Sliding window
+https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/
+
+- Monotonic stack
+https://leetcode.com/problems/find-the-most-competitive-subsequence/description/
+https://leetcode.com/problems/next-greater-element-ii/description/
+
+- Bit manipulation
+
+- Trie
+
+
