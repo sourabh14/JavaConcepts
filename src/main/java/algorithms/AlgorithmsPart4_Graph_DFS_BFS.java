@@ -32,6 +32,14 @@ class Graph {
         }
     }
 
+    public void print() {
+        System.out.println("Graph Adjacency list");
+        for (int i=0; i<size; i++) {
+            System.out.print(i + ": " + graph.get(i));
+        }
+        System.out.println("--");
+    }
+
     // -------------------------------------- BFS --------------------------------------------------
 
     public void bfs(int source) {
@@ -42,14 +50,14 @@ class Graph {
         queue.add(source);
         discovered[source] = true;
 
-        System.out.println("BFS: ");
+        // System.out.println("BFS: ");
         while (!queue.isEmpty()) {
             int qsize = queue.size();
 
             for (int k=0; k<qsize; k++) {
                 int curr = queue.remove();
                 // visit node
-                System.out.print(curr + ", ");
+                // System.out.print(curr + ", ");
                 visited[curr] = true;
                 // add all its adjacent nodes which are not discovered
                 for (int i=0; i<graph.get(curr).size(); i++) {
@@ -125,13 +133,13 @@ class Graph {
     public void dfs(int source) {
         Arrays.fill(discovered, false);
         Arrays.fill(visited, false);
-        System.out.println("DFS: ");
+        // System.out.println("DFS: ");
         for (int i=0; i<size; i++) {
             if (!visited[i]) {
                 depthFirstTraverse(i, this.graph);
             }
         }
-        System.out.println();
+        // System.out.println();
     }
 
     public void depthFirstTraverse(int source, List<List<Integer>> graph) {
@@ -147,8 +155,37 @@ class Graph {
 
         // visit node
         visited[source] = true;
-        System.out.print(source + ", ");
+        // System.out.print(source + ", ");
     }
+
+    /*                                 DFS on matrix
+    ---------------------------------------------------------------------------------------------------------------*/
+
+
+    private void dfs(int i, int j, int[][] board, boolean[][] discovered) {
+        discovered[i][j] = true;
+        board[i][j] = 2;
+
+        if (isValidCell(i-1, j, board) && !discovered[i-1][j] && board[i-1][j] == 1) {
+            dfs(i-1, j, board, discovered);
+        }
+        if (isValidCell(i+1, j, board) && !discovered[i+1][j] && board[i+1][j] == 1) {
+            dfs(i+1, j, board, discovered);
+        }
+        if (isValidCell(i, j-1, board) && !discovered[i][j-1] && board[i][j-1] == 1) {
+            dfs(i, j-1, board, discovered);
+        }
+        if (isValidCell(i, j+1, board) && !discovered[i][j+1] && board[i][j+1] == 1) {
+            dfs(i, j+1, board, discovered);
+        }
+    }
+
+    private boolean isValidCell(int i, int j, int[][] board) {
+        return (i>=0 && i<board.length && j>=0 && j<board[0].length);
+    }
+
+
+
 
     /*                                 Connected components
     ---------------------------------------------------------------------------------------------------------------*/
@@ -230,9 +267,8 @@ class Graph {
                 depthFirstTraverse_topologicalSort(adj, arr);
             }
         }
-
-        // visit node
         visited[source] = true;
+        // After visiting source, insert it in the front of arrayList
         arr.addFirst(source);
     }
 
