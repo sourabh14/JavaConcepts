@@ -3,29 +3,9 @@ package algorithms;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
-class Edge {
-    int v1;
-    int v2;
-    int weight;
-
-    public Edge(int v1, int v2, int weight) {
-        this.v1 = v1;
-        this.v2 = v2;
-        this.weight = weight;
-    }
-
-    @Override
-    public String toString() {
-        return "Edge{" +
-                "v1=" + v1 +
-                ", v2=" + v2 +
-                ", weight=" + weight +
-                "}\n";
-    }
-}
-
-class AlgorithmsPart6 {
+public class AlgorithmsPart8_MST_Kruskal {
     /*
         Spanning Tree:
             Given an undirected and connected graph G = (V, E), a spanning tree of the graph G is a tree that spans
@@ -53,6 +33,66 @@ class AlgorithmsPart6 {
                 - Start adding edges to the MST from the edge with the smallest weight until the edge of the largest weight.
                 - Only add edges which doesn't form a cycle , edges which connect only disconnected components.
      */
+
+    class Edge {
+        int v1;
+        int v2;
+        int weight;
+
+        public Edge(int v1, int v2, int weight) {
+            this.v1 = v1;
+            this.v2 = v2;
+            this.weight = weight;
+        }
+
+        @Override
+        public String toString() {
+            return "Edge{" +
+                    "v1=" + v1 +
+                    ", v2=" + v2 +
+                    ", weight=" + weight +
+                    "}\n";
+        }
+    }
+
+    class DisjointSet {
+        private List<Integer> parent;
+
+        public DisjointSet(int n) {
+            this.parent = new ArrayList<>(n);
+            for (int i=0; i<n; i++) this.parent.add(i);
+        }
+
+        private void compressPath(int v) {
+            int parent = this.parent.get(v);
+            int grandparent = this.parent.get(parent);
+            while (grandparent != parent) {     // for root of tree parent and grandparent are equals
+                parent = grandparent;
+                grandparent = this.parent.get(parent);
+            }
+            this.parent.set(v, parent);
+        }
+
+        public boolean isConnected(int v1, int v2) {
+            compressPath(v1);
+            compressPath(v2);
+            return (Objects.equals(this.parent.get(v1), this.parent.get(v2)));
+        }
+
+        public void mergeSet(int v1, int v2) {
+            compressPath(v1);
+            compressPath(v2);
+            int parent1 = this.parent.get(v1);
+            int parent2 = this.parent.get(v2);
+            this.parent.set(parent1, parent2);
+        }
+
+        public int getParent(int v) {
+            compressPath(v);
+            return this.parent.get(v);
+        }
+
+    }
 
     public void execute() {
         int n = 9;

@@ -87,7 +87,7 @@ class Graph {
 
         queue.add(source);
         discovered[source] = true;
-        shortestPath[0] = 0;
+        shortestPath[source] = 0;
 
         while (!queue.isEmpty()) {
             int qsize = queue.size();
@@ -143,8 +143,9 @@ class Graph {
     }
 
     public void depthFirstTraverse(int source, List<List<Integer>> graph) {
+        // discover node
         discovered[source] = true;
-        // for all adjacent nodes
+        // for all adjacent nodes not discovered, call dfs
         for (int i=0; i<graph.get(source).size(); i++) {
             int adj = graph.get(source).get(i);
             // dfs all adjacent nodes which are not discovered
@@ -319,19 +320,60 @@ class Graph {
 
 }
 
-public class AlgorithmsPart4_Graph_DFS_BFS {
+public class AlgorithmsPart7_Graph_DFS_BFS {
 
     public void execute() {
         /*
             Graph, BFS, DFS
 
-            Adjacency list representation:
-                - Appropriate for sparse graphs - where edges are much less than (vertices)^2
+            Graph
+            ------
+                Intro:
+                    - A graph is a data structure used to represent relationships between pairs of objects. It is composed
+                        of nodes (also called vertices) and edges (also called links or arcs)
+                    - Graphs are used to represent networks. The networks may include paths in a city or telephone
+                        network or circuit network.
 
-            Adjacency matrix representation:
-                - Appropriate when graph is dense or when we need to tell if there is an edge
-                    connecting two different vertices
-                - It's more simple. Can be used when graph is reasonably small.
+                Applications
+                    - Social Networks: Modeling relationships between users.
+                    - Web Graphs: Representing links between web pages.
+                    - Transport Networks: Mapping routes and connections between cities.
+                    - Recommendation Systems: Suggesting products or content based on user interactions.
+                    - Biological Networks: Modeling interactions between proteins or genes.
+
+                Basic Terminology
+                    - Vertex (Node): A fundamental part of a graph that represents an object.
+                    - Edge (Link): A connection between two vertices that represents a relationship or interaction.
+                    - Degree: The number of edges connected to a vertex.
+                    - Path: A sequence of vertices where each consecutive pair is connected by an edge.
+                    - Cycle: A path that starts and ends at the same vertex, with no other vertex repeated.
+                    - Connected Graph: A graph where there is a path between every pair of vertices.
+                    - Disconnected Graph: A graph where some vertices are not connected by paths.
+                    - Subgraph: A graph formed from a subset of vertices and edges of a larger graph.
+                    - Directed Graph (Digraph): A graph where edges have a direction, indicating a one-way relationship.
+                    - Undirected Graph: A graph where edges have no direction, indicating a two-way relationship.
+                    - Weighted Graph: A graph where edges have weights representing the cost or distance of the relationship.
+
+                Types of Graphs
+                    - Simple Graph: A graph with no loops (edges connected at both ends to the same vertex) and no more
+                        than one edge between any pair of vertices.
+                    - Multigraph: A graph that allows multiple edges between the same pair of vertices.
+                    - Complete Graph: A graph where there is an edge between every pair of vertices.
+                    - Bipartite Graph: A graph whose vertices can be divided into two disjoint sets such that every edge connects a vertex in one set to a vertex in the other set.
+                    - Tree: A connected acyclic graph.
+                    - Forest: A disjoint set of trees.
+
+                Graph Representation
+
+                    Adjacency list representation:
+                        - An array of lists where each list contains the adjacent vertices of a particular vertex.
+                        - Appropriate for sparse graphs - where edges are much less than (vertices)^2
+
+                    Adjacency matrix representation:
+                        - A 2D array where each element indicates whether an edge exists between a pair of vertices.
+                        - Appropriate when graph is dense or when we need to tell if there is an edge
+                            connecting two different vertices
+                        - It's more simple. Can be used when graph is reasonably small.
          */
 
         int MAX_VERTICES = 10;
@@ -347,15 +389,16 @@ public class AlgorithmsPart4_Graph_DFS_BFS {
         graph.join(7, 8, false);
 
         /*
-            BFS traversal
-                - systematically explore the edge to discover every vertex that is reachable from source
-                - vertex is discovered first time it is encountered
-                - vertex is visited when all its adjacent vertices are discovered
-                - Time complexity: O(V + E)
+            Graph Traversal
+                BFS traversal
+                    - systematically explore the edge to discover every vertex that is reachable from source
+                    - vertex is discovered first time it is encountered
+                    - vertex is visited when all its adjacent vertices are discovered
+                    - Time complexity: O(V + E)
 
-            Shortest path distance
-                - BFS can be used to find shortest-path - minimum no of edges (works for both directed and
-                    undirected - unweighted graph)
+                Shortest path distance
+                    - BFS can be used to find shortest-path - minimum no of edges (works for both directed and
+                        undirected - unweighted graph)
          */
 
         graph.bfs(0);
@@ -411,5 +454,15 @@ public class AlgorithmsPart4_Graph_DFS_BFS {
 
         System.out.println("\nGraph 2");
         g2.detectCycle();
+
+        /*
+            Graph short summary
+            - Graph structure
+            - DFS
+                - Connected components
+                - Detect cycle
+            - BFS
+                -
+         */
     }
 }

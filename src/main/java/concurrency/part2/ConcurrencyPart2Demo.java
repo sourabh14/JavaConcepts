@@ -8,7 +8,7 @@ public class ConcurrencyPart2Demo {
         System.out.println("\n\n ----- Threads Introduction -----");
         /*
             Thread Class (java.lang.Thread)
-                - A thread is a thread of execution in a program.
+                - A thread is a unit of execution in a program.
                 - The Java Virtual Machine allows an application to have multiple threads of execution running concurrently.
                 - implements Runnable - which is a functional interface with method run(). Indicates that something that can be run.
                 - The Runnable interface should be implemented by any class whose instances are intended to be executed by a thread.

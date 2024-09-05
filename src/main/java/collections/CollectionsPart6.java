@@ -184,6 +184,7 @@ public class CollectionsPart6 {
     }
 
     public void priorityQueue() {
+        // By default this will build min heap. Min element at top
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
         priorityQueue.add(4);
         priorityQueue.add(1);
@@ -218,7 +219,7 @@ public class CollectionsPart6 {
         System.out.println();
 
         // Ordering by comparator - rank
-        PriorityQueue<Student> studentPriorityQueue = new PriorityQueue<>((a, b) -> Integer.compare(a.rank, b.rank));
+        PriorityQueue<Student> studentPriorityQueue = new PriorityQueue<>(Comparator.comparingInt(a -> a.rank));
         studentPriorityQueue.add(new Student("test1", 5));
         studentPriorityQueue.add(new Student("test2", 1));
         studentPriorityQueue.add(new Student("test3", 6));

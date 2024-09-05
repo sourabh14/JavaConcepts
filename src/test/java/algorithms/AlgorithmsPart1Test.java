@@ -6,6 +6,6 @@ class AlgorithmsPart1Test {
 
     @Test
     void execute() {
-        new AlgorithmsPart1_Sorting().execute();
+        new AlgorithmsPart1_Sort_Binary_Search().execute();
     }
 }

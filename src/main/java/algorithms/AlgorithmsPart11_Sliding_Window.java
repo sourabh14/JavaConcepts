@@ -3,7 +3,7 @@ package algorithms;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AlgorithmsPart8_Sliding_Window {
+public class AlgorithmsPart11_Sliding_Window {
     public static void main(String[] args) {
         /*
             Sliding Window

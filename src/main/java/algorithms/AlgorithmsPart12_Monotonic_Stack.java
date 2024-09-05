@@ -3,7 +3,7 @@ package algorithms;
 import java.util.Arrays;
 import java.util.Stack;
 
-public class AlgorithmsPart9_Monotonic_Stack {
+public class AlgorithmsPart12_Monotonic_Stack {
 
     class Pair {
         int val;

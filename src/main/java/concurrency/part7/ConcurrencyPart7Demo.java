@@ -58,6 +58,9 @@ public class ConcurrencyPart7Demo {
                     threadLocalUserId.set(100);
                     Integer userId = threadLocalUserId.get();
 
+                - ThreadLocal can be also used to store context
+                - Spring uses ThreadLocal and ContextHolder in many classes
+
          */
 
         System.out.println("\nThread local demo ---");

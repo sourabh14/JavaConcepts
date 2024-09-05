@@ -25,6 +25,14 @@ public class AlgorithmsPart2_Infix_Postfix_Prefix {
 			-Pop and output from the stack until it is not empty.
      */
 
+    /*
+        iterate through string chars
+            - if ch is alphabet : append it to postfix
+            - if ch is operator or opening bracket : push it to stack
+            - if ch is closing bracket :
+                pop untill opening bracket is reached and append it to postfix
+     */
+
     public String infixToPostfix(String infixString) {
         infixString = "(" + infixString + ")";
 
@@ -48,10 +56,10 @@ public class AlgorithmsPart2_Infix_Postfix_Prefix {
             } else {
                 stack.push(ch);
             }
-//            System.out.println("stack = " + stack);
-//            System.out.println("temp = " + temp);
-//            System.out.println("postfix = " + postfix);
-//            System.out.println("");
+            System.out.println("stack = " + stack);
+            System.out.println("temp = " + temp);
+            System.out.println("postfix = " + postfix);
+            System.out.println("");
         }
 
         return postfix.toString();

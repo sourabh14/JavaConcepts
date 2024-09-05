@@ -4,46 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-class DisjointSet {
-    private List<Integer> parent;
-
-    public DisjointSet(int n) {
-        this.parent = new ArrayList<>(n);
-        for (int i=0; i<n; i++) this.parent.add(i);
-    }
-
-    private void compressPath(int v) {
-        int parent = this.parent.get(v);
-        int grandparent = this.parent.get(parent);
-        while (grandparent != parent) {     // for root of tree parent and grandparent are equals
-            parent = grandparent;
-            grandparent = this.parent.get(parent);
-        }
-        this.parent.set(v, parent);
-    }
-
-    public boolean isConnected(int v1, int v2) {
-        compressPath(v1);
-        compressPath(v2);
-        return (Objects.equals(this.parent.get(v1), this.parent.get(v2)));
-    }
-
-    public void mergeSet(int v1, int v2) {
-        compressPath(v1);
-        compressPath(v2);
-        int parent1 = this.parent.get(v1);
-        int parent2 = this.parent.get(v2);
-        this.parent.set(parent1, parent2);
-    }
-
-    public int getParent(int v) {
-        compressPath(v);
-        return this.parent.get(v);
-    }
-
-}
-
-class AlgorithmsPart5 {
+public class AlgorithmsPart9_Disjoint_Set {
     /*
         Disjoint set data structure:
          *  -a structure that maintains a collection S1, S2, S3, …, Sn of
@@ -67,6 +28,46 @@ class AlgorithmsPart5 {
          *    Path compression - make each node on the find path point directly to the root
          * 					   - this keeps tree almost flat
      */
+
+    class DisjointSet {
+        private List<Integer> parent;
+
+        public DisjointSet(int n) {
+            this.parent = new ArrayList<>(n);
+            for (int i=0; i<n; i++) this.parent.add(i);
+        }
+
+        private void compressPath(int v) {
+            int parent = this.parent.get(v);
+            int grandparent = this.parent.get(parent);
+            while (grandparent != parent) {     // for root of tree parent and grandparent are equals
+                parent = grandparent;
+                grandparent = this.parent.get(parent);
+            }
+            this.parent.set(v, parent);
+        }
+
+        public boolean isConnected(int v1, int v2) {
+            compressPath(v1);
+            compressPath(v2);
+            return (Objects.equals(this.parent.get(v1), this.parent.get(v2)));
+        }
+
+        public void mergeSet(int v1, int v2) {
+            compressPath(v1);
+            compressPath(v2);
+            int parent1 = this.parent.get(v1);
+            int parent2 = this.parent.get(v2);
+            this.parent.set(parent1, parent2);
+        }
+
+        public int getParent(int v) {
+            compressPath(v);
+            return this.parent.get(v);
+        }
+
+    }
+
     public void execute() {
         DisjointSet disjointSet = new DisjointSet(10);
         disjointSet.mergeSet(0, 1);
