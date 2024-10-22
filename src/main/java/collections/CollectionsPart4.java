@@ -19,7 +19,7 @@ public class CollectionsPart4 {
             - LinkedHashSet, which is implemented as a hash table with a linked list running through it, orders its
                 elements based on the order in which they were inserted into the set (insertion-order).
                 - LinkedHashSet spares its clients from the unspecified, generally chaotic ordering provided by
-                HashSet at a cost that is only slightly higher.
+                HashSet at a cost that is only slightly higher
 
      */
     public void setDemo() {

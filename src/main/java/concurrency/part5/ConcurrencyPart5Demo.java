@@ -6,7 +6,7 @@ public class ConcurrencyPart5Demo {
         /*
             Scheduler
                 - The cpu scheduler is responsible for scheduling a thread to be executed by core
-                - It unschedules a running thread temporarily, as needed.
+                - It un-schedules a running thread temporarily, as needed.
                 - Scheduler tries to be fair, so that every thread gets a chance.
                 - It also considers priority, some thread may be higher in priority, so they get more cpu.
 

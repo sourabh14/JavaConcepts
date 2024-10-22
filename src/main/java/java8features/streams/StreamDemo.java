@@ -8,6 +8,7 @@ import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import java8features.lambdas.Person;
 
@@ -50,9 +51,9 @@ public class StreamDemo {
                 - parallel streams make it easy to multi-thread operations
 
             Elements of a stream:
-                 - source: provides elements - colleciton
-                 - intermediate operations: such as filter/ map/ sort
-                 - terminal operation: such as forEach/ collect/ reduce
+                 - source: provides elements - collection
+                 - intermediate operations: such as filter/ map/ sort/ distinct/ limit
+                 - terminal operation: such as forEach/ collect/ reduce/ count/ max
 
 
             Source -> Filter -> Sort -> Map -> Collect
@@ -91,6 +92,14 @@ public class StreamDemo {
                 .max(Comparator.comparing(Person::getAge))
                 .map(Person::getFirstName);
         System.out.println("fname = " + (fname.isPresent() ? fname.get() : null));
+
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> filtered = numbers.stream()
+                                .filter((num) -> num > 2)
+                                .map((num) -> num * 2)
+                                .sorted()
+                                        .collect(Collectors.toList());
+        System.out.println("filtered = " + filtered);
 
         /*
         Intermediate operations
