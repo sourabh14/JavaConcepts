@@ -41,7 +41,7 @@ Part 5
 
 Part 6
 - Hash tables
-- Sliding window
+- Sliding window/ Two pointer
 - Bit manipulation
 - Trie
 
@@ -53,7 +53,7 @@ Part 6
 ---------------------------------------------------------------------
 
 - Easy Beginning
-https://leetcode.com/problems/valid-anagram/
+https://leetcode.com/problems/valid-anagram/                DONE
 https://leetcode.com/problems/two-sum/
 
 - Array:
@@ -151,6 +151,18 @@ https://leetcode.com/problems/number-of-provinces/description/
 https://leetcode.com/problems/min-cost-to-connect-all-points/submissions/
 https://leetcode.com/problems/possible-bipartition/description/         **
 
+    TODO
+
+    Shortest path in matrix (0/1 BFS)
+
+    Clone Graph
+
+    Detect cycle (directed & undirected)
+
+    Word Ladder
+
+    Network Delay Time
+
 
 - Disjoint set:
 https://leetcode.com/problems/accounts-merge/
@@ -188,6 +200,46 @@ https://leetcode.com/problems/01-matrix/description/        **
 https://leetcode.com/problems/maximum-score-after-applying-operations-on-a-tree/description/ **
 https://leetcode.com/problems/maximal-square/               **
 
+    TODO
+
+    Organize DP by pattern:
+
+    🔹 1D DP
+
+    House Robber
+
+    Coin Change
+
+    LIS
+
+    Max Subarray
+
+    Climbing Stairs
+
+    🔹 2D DP
+
+    LCS
+
+    Edit Distance
+
+    Knapsack
+
+    Partition Equal Subset
+
+    Maximal Square
+
+    🔹 Grid DP
+
+    Unique Paths
+
+    01 Matrix
+
+    🔹 Tree DP
+
+    Maximum Path Sum
+
+    Maximum Score After Applying Operations on Tree
+
 
 
 - Hash tables:
@@ -196,9 +248,17 @@ https://leetcode.com/problems/subarray-sum-equals-k/                **
 https://leetcode.com/problems/find-the-duplicate-number/
 https://leetcode.com/problems/top-k-frequent-elements/
 
-- Sliding window
+- Sliding window/ Two pointers
 https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/
+    TODO
+    Longest Repeating Character Replacement
+    Minimum Window Substring
+    Fruit Into Baskets
+    Subarray Product Less Than K
+    3Sum
+    4Sum
+    Container With Most Water
 
 - Monotonic stack
 https://leetcode.com/problems/find-the-most-competitive-subsequence/description/
@@ -208,7 +268,54 @@ https://leetcode.com/problems/next-greater-element-ii/description/
 https://leetcode.com/problems/the-kth-factor-of-n/
 
 - Bit manipulation
+    TODO
+    Single Number I, II, III
+
+    Counting Bits
+
+    Reverse Bits
+
+    Power of Two
+
+    Subsets (bitmask version)
 
 - Trie
+    TODO
+    Implement Trie (LC 208)
+
+    Word Search II
+
+    Replace Words
+
+    Longest Word in Dictionary
+
+    Design Add and Search Words
 
 
+- System-style DSA questions - HashMap + Heap + LinkedList combo
+    TODO
+
+    LRU Cache (you already have ✅)
+
+    LFU Cache
+
+    Design Twitter
+
+    Design Hit Counter
+
+    RandomizedSet
+
+    Median from Data Stream
+
+    Kth largest in stream
+
+
+
+## Final pointers
+You must be able to:\
+  - Explain time & space complexity clearly
+  - Handle edge cases
+  - Write clean code (no hacks)
+  - Optimize brute force to optimal
+  - Dry run with sample input
+  - Ask clarifying questions

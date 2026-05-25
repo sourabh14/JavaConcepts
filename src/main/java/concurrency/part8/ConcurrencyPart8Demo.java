@@ -8,10 +8,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import concurrency.part2.PrimeNumberUtils;
-import concurrency.part7.CounterWithLock;
-import concurrency.part7.ThreadLocalDemo;
 
 public class ConcurrencyPart8Demo {
     public void execute() {

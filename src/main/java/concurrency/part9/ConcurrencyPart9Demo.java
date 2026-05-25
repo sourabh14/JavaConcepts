@@ -41,8 +41,6 @@ public class ConcurrencyPart9Demo {
 
         // #### Uncomment following lines for demo ####
 //        ExecutorService executorService = Executors.newFixedThreadPool(2);
-
-
 //        Future<String> future = executorService.submit(callable);
 
 //        System.out.println("Executing in main thread");

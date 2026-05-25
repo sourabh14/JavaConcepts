@@ -50,7 +50,7 @@ public class SummaryConcurrency {
             - Concurrency can be achieved with single core, or multi-core cpus.
 
 
-        ---------------- Thread, User & Daemon threads, Thread lifecycle, Joins, Interrupts
+         --------------- Thread, User & Daemon threads, Thread lifecycle, Joins, Interrupts
 
          Thread Class
             - Java threads are objects like any other Java objects. Threads are instances of class java.lang.Thread,

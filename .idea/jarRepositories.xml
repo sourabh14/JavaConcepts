@@ -2,9 +2,24 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="hyc-ug-thirdparty-maven-local" />
+      <option name="name" value="hyc-ug-thirdparty-maven-local" />
+      <option name="url" value="https://na.artifactory.swg-devops.com/artifactory/hyc-ug-thirdparty-maven-local" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="wdp.connectors.releases" />
+      <option name="name" value="dataconn-maven-all" />
+      <option name="url" value="https://na.artifactory.swg-devops.com/artifactory/dataconn-maven-all" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="analytics.maven.stable" />
+      <option name="name" value="analytics.maven.stable" />
+      <option name="url" value="https://na.artifactory.swg-devops.com:443/artifactory/hyc-wml-devops-team-ngp-stable-maven-local" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
@@ -15,6 +30,31 @@
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="ngp-public" />
+      <option name="name" value="Artifactory Managed Group of Repositories" />
+      <option name="url" value="https://na.artifactory.swg-devops.com:443/artifactory/hyc-wml-devops-team-ngp-public-maven-virtual" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="pekko.snapshots" />
+      <option name="name" value="pekko.snapshots" />
+      <option name="url" value="https://repository.apache.org/content/groups/snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="analytics.maven.build" />
+      <option name="name" value="analytics.maven.build" />
+      <option name="url" value="https://na.artifactory.swg-devops.com:443/artifactory/hyc-wml-devops-team-ngp-build-maven-local" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="aios" />
+      <option name="name" value="artifactory-dal10-01-node-04.swg-devops.com-releases" />
+      <option name="url" value="https://na.artifactory.swg-devops.com:443/artifactory/wcp-aiopenscale-maven-virtual" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spss-assembly" />
+      <option name="name" value="spss-assembly" />
+      <option name="url" value="https://na.artifactory.swg-devops.com/artifactory/hyc-spark-runtime-team-spss-algorithm-generic-local/" />
     </remote-repository>
   </component>
 </project>
